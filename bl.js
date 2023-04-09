@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function details() {
     
     playerEl.textContent = "Name: " + person + " ,    " + "Started Bid: " + bid + "$"
+    let alert = alert("You win if you get a total of 21. Try your luck!")
 }
 details()
 });
