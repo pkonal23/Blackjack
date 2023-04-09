@@ -1,0 +1,48 @@
+body{
+    background-color: green;
+    text-align: center;
+}
+
+h1{
+    color: rgb(226, 179, 8);
+    font-size: 100px;
+}
+p{
+    color: whitesmoke;
+    font-size: 50px;
+}
+#message-el{
+    font-style: italic;
+}
+
+button{
+    margin-top: 5px;
+    color: green;
+    background-color: goldenrod;
+    width: 200px;
+    font-size: 20px;
+    padding: 10px;
+    font-style: italic;
+}
+
+#mess-el{
+    font-size: 20px;
+    color: rgb(172, 5, 5);
+    font-weight: bold;
+    background-color: white;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#player-el{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+#newplayer-el{
+    color: black;
+    font-size: 25px;
+}
+#restart-el{
+    color: black;
+}
