@@ -1,3 +1,4 @@
+alert("'BLACKJACK' GAME RULES\n1) Start Game:- Selects two cards at random for starting the game\n2) New Card:- Selects a Card at random\n3)You win if the total of cards is 21\n Try your luck!")
 let person = prompt("Enter name:")
 let bid = prompt("Enter bid:")
 document.addEventListener("DOMContentLoaded", function () {
@@ -16,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function details() {
     
     playerEl.textContent = "Name: " + person + " ,    " + "Started Bid: " + bid + "$"
-    alert("'BLACKJACK' GAME RULES\n1) Start Game:- Selects two cards at random for starting the game\n2) New Card:- Selects a Card at random  3)You win if the total of cards is 21\n Try your luck!")
 }
 details()
 });
