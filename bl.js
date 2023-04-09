@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function details() {
     
     playerEl.textContent = "Name: " + person + " ,    " + "Started Bid: " + bid + "$"
-    let alert = alert("You win if you get a total of 21. Try your luck!")
+    alert("'BLACKJACK' GAME RULES\n1) Start Game:- Selects two cards at random for starting the game\n2) New Card:- Selects a Card at random  3)You win if the total of cards is 21\n Try your luck!")
 }
 details()
 });
