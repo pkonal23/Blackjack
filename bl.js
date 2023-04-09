@@ -1,32 +1,33 @@
-alert("'BLACKJACK' GAME RULES\n1) Start Game:- Selects two cards at random for starting the game\n2) New Card:- Selects a Card at random\n3)You win if the total of cards is 21\n Try your luck!")
+alert("'BLACKJACK' GAME RULES\n1) Start Game:- Selects two cards at random for starting the game\n2) New Card:- Selects a Card at random\n3) You win if the total of cards is 21\n4) If you win the bid amount doubles\n5) If you loose your bid amount reduces to 0.\n6) You can not play with 0 bid amount, you need to RESTART GAME\n Try your luck!")
 let person = prompt("Enter name:")
 let bid = prompt("Enter bid:")
-document.addEventListener("DOMContentLoaded", function () {
-    // Your JavaScript code goes here
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Your JavaScript code goes here
 
 
 
-    // let firstCard = 10
-    // let secodCard = 11
-    // let player = {
-    //     name: "KONAL",
-    //     chips: 199
-    // }
-    let playerEl = document.getElementById("player-el")
+        // let firstCard = 10
+        // let secodCard = 11
+        // let player = {
+        //     name: "KONAL",
+        //     chips: 199
+        // }
+        let playerEl = document.getElementById("player-el")
 
-function details() {
-    
-    playerEl.textContent = "Name: " + person + " ,    " + "Started Bid: " + bid + "$"
-}
-details()
-});
+        function details() {
 
-
+            playerEl.textContent = "Name: " + person + " ,    " + "Started Bid: " + bid + "$"
+        }
+        details()
+    });
 
 
 
 
-   
+
+
+
     let cards = [] //array
     let sum = 0
     let hasBlackJack = false
@@ -46,12 +47,12 @@ details()
     }
     function renderGame() {
         let restartEl = document.getElementById("restart-el")
-        let leftbid=bid
+        let leftbid = bid
         let sumEl = document.querySelector("#sum-el");
         let cardEl = document.querySelector("#card-el");
         let messageEl = document.getElementById("message-el");
         let message;
-    
+
         if (sum <= 20) {
             isAlive = true;
             message = "Do you want to draw a new card?";
@@ -59,34 +60,34 @@ details()
             hasBlackJack = true;
             isAlive = true;
             message = "Wohoo! You've got Blackjack!";
-            leftbid = bid*2; // double the bid amount
+            leftbid = bid * 2; // double the bid amount
             restartEl.textContent = "You WON! (RELOAD PAGE TO RESTART)"
         } else {
             isAlive = false;
             message = "You're out of the game!";
             leftbid = 0; // reset the bid amount to 0
-            restartEl.textContent = "You LOST (RELOAD PAGE TO RESTART)"
+            restartEl.textContent = "YOU LOST. BETTER LUCK NEXT TIME!"
         }
-    
+
         messageEl.textContent = message;
         sumEl.textContent = "Sum: " + sum;
         cardEl.textContent = "Cards: ";
         for (let i = 0; i < cards.length; i++) {
             cardEl.textContent += cards[i] + " ";
         }
-        console.log("leftbid: "+leftbid)
-      
-            let newplayerEl = document.getElementById("newplayer-el")
-            newplayerEl.textContent = "Name: " + person + " ,    " + "Left Bid: " + leftbid + "$"
-           
-        
+        console.log("leftbid: " + leftbid)
+
+        let newplayerEl = document.getElementById("newplayer-el")
+        newplayerEl.textContent = "Name: " + person + " ,    " + "Left Bid: " + leftbid + "$"
+
+
     }
 
 
-    
+
 
     function startEl() {
-        
+
         let firstCard = getrandomcard()
         let secodCard = getrandomcard()
         cards = [firstCard, secodCard] //array
@@ -105,9 +106,10 @@ details()
             console.log(cards)
             sum += newCard
             renderGame()
-            setTimeout(function() {
+            setTimeout(function () {
                 newEl.textContent = "";
-              }, 1000);
+            }, 1000);
         }
 
     }
+

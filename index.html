@@ -9,6 +9,7 @@
     <script src="bl.js" ></script>
 </head>
 <body>
+    <div class="box" >
     <h1>Blackjack</h1>
     <p id="message-el"> Want to play a round?</p>
     <p id="card-el" >Cards:</p>
@@ -19,6 +20,11 @@
     <button id="newcard-el" onclick="newcardEl()">NEW CARD</button>
     <p id="player-el"></p>
     <p id="newplayer-el"></p>
-    <p id="restart-el"></p>
+    <p id="restart-el"></p> 
+    
+    <button onclick="location.reload();">Restart Game</button>
+
+    <p id="rules">'BLACKJACK' GAME RULES <br><br> 1) Start Game:- Selects two cards at random for starting the game <br> 2) New Card:- Selects a Card at random <br> 3) You win if the total of cards is 21<br> 4) If you win the bid amount doubles <br> 5) If you loose your bid amount reduces to 0. <br> 6) You can not play with 0 bid amount, you need to RESTART GAME   <br>  Try your luck!</p>
+</div>
 </body>
 </html>
